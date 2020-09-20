@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <!-- Some very simple metadata -->
+    <link type="text/css" href="style/stylesheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitemap - R&M</title>
+</head>
+<body>
+    <!-- Header which contains the elements at the top of the page, such as a logo, search bar, navigation and mobile navigation toggle -->
+    <header>
+        <!-- Toggle button for mobile navigation -->
+        <input type="checkbox" id="menu" class="hidden"/>
+        <label for="menu" id="menuLabel" class="mobile"></label>
+        <!-- Logo, navigation and dead search bar -->
+        <img id="logo" src="media/content/logo-white.svg" alt="Logo"/>
+        <input id="search" class="desktop" type="text" placeholder="What are you going to wear tomorrow?"/> 
+        <nav>
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <p>Collections</p>
+                <div class="content">
+                    <a href="spring.html">Spring</a>
+                    <a href="summer.html">Summer</a>
+                    <a href="autumn.html">Autumn</a>
+                    <a href="winter.html">Winter</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+            <a class="active" href="sitemap.html">Sitemap</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <!-- Dead progress meter -->
+    <div id="progress" class="desktop">
+        <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40"/>
+        </svg>
+        <p>0%</p>
+    </div>
+    <!-- Main content of website -->
+    <main>
+        <!-- 2 Background elements -->
+        <img class="desktop" src="media/content/human.svg" alt="" style="position:absolute;top:60%;left:25%;max-width:unset;width:300px;height:auto;z-index:0"/>
+        <img class="desktop" src="media/content/human2.svg" alt="" style="position:absolute;top:40%;left:55%;max-width:unset;width:300px;height:auto;z-index:0"/>
+        <!-- Main divided up in sections -->
+        <section>
+            <!-- Wrapper element to allow for easy implementation of whitespace around the edges and flexbox throughout the website, also as a bonus seperates elements that shouldn't be together in a flex box -->
+            <div class="wrapper">
+                <div class="heading">
+                    <h1>Find your way</h1>
+                </div>
+            </div>
+            <div class="wrapper">
+                <!-- "item" elements with special additional properties to be able to display nicely in a flexbox -->
+                <div class="card item">
+                    <h2>Home</h2>
+                    <button>Visit</button>
+                </div>
+                <div class="card item">
+                    <h2>Collections</h2>
+                    <!-- <ul>
+                        <li>Spring</li>
+                        <li>Summer</li>
+                        <li>Autumn</li>
+                        <li>Winter</li>
+                    </ul> -->
+                    <button>Visit</button>
+                </div>
+                <div class="card item">
+                    <h2>About</h2>
+                    <button>Visit</button>
+                </div>
+                <div class="card item">
+                    <h2>Sitemap</h2>
+                    <button>Visit</button>
+                </div>
+                <div class="card item">
+                    <h2>Contact</h2>
+                    <button>Visit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer element to display Copyright information, links and extra information -->
+    <footer>
+        <div>
+            <form>
+                <label for="email">E-Mail</label><br/>
+                <input type="text" placeholder="john.doe@domain.com" name="email"/>
+                <input type="submit" value="Sign up!"/>
+            </form>
+        </div>
+        <div>
+            <p><a href="https://roelc.me">Ro&euml;l Couwenberg</a> & Merlijn Brinks</p>
+        </div>
+    </footer>
+    <script>
+    </script>
+</body>
+</html>
