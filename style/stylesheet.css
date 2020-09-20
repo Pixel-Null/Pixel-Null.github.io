@@ -269,6 +269,7 @@ main a, footer a {
     color: inherit;
     font-weight: bold;
     position: relative;
+    white-space: nowrap;
 }
 main a:after, footer a:after {
     background-color: var(--accent-color);
@@ -285,6 +286,11 @@ main a:after, footer a:after {
 }
 main a:hover:after, footer a:hover:after {
     width: 100%;
+}
+p img {
+    max-width: 1em;
+    display: inline-block;
+    vertical-align: center;
 }
 .heading {
     z-index: 5;
