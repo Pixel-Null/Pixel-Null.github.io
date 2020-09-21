@@ -48,29 +48,27 @@
         <!-- 2 Background elements -->
         <img class="desktop" src="media/human.svg" alt="" style="position:absolute;top:60%;left:25%;max-width:unset;width:300px;height:auto;z-index:0"/>
         <img class="desktop" src="media/human2.svg" alt="" style="position:absolute;top:40%;left:55%;max-width:unset;width:300px;height:auto;z-index:0"/>
-        <!-- Main divided up in sections -->
-        <section>
-            <!-- Wrapper element to allow for easy implementation of whitespace around the edges and flexbox throughout the website, also as a bonus seperates elements that shouldn't be together in a flex box -->
-            <div class="wrapper">
+        <div class="wrapper">
+            <section>
                 <div class="heading">
                     <h1>The autumn collection</h1>
                     <p>Find your new outfit for this fall.</p>
                 </div>
-            </div>
-            <div class="wrapper">
+            </section>
+            <section>
                 <div class="card" style="max-width:600px">
                     <p>Our new autumn collection makes you look stylish while being able to remain comfortably warm at any time of the day.</p>
                     <button>Show me!</button>
                 </div>
-            </div>
-            <aside class="card" id="newsletter">
-                <p>Sign up for our newsletter today!</p>
-                <form>
-                    <input type="text" placeholder="john.doe@domain.com" name="email"/>
-                    <input type="submit" value="Sign up!"/>
-                </form>
-            </aside>
-        </section>
+            </section>
+        </div>
+        <aside class="card" id="newsletter">
+            <p>Sign up for our newsletter today!</p>
+            <form>
+                <input type="text" placeholder="john.doe@domain.com" name="email"/>
+                <input type="submit" value="Sign up!"/>
+            </form>
+        </aside>
     </main>
     <script>
     </script>

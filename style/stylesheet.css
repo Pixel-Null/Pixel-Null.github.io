@@ -38,6 +38,7 @@ html,body {
     background-color: var(--page-background-color-1);
     overflow-x: hidden;
     color: var(--page-text-color);
+    scroll-behavior: smooth;
 }
 main {
     min-height: 100vh;
@@ -204,6 +205,25 @@ nav a.active:after {
     padding-top: 10px;
     margin-left: 0;
 }
+nav>.sub {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--menu-background-color-1);
+    color: var(--menu-text-color);
+    font-size: .8em;
+    box-shadow: 0px 25px 31px -8px rgba(0,0,0,0.06);
+    padding-right: 20px;
+    opacity: 0;
+    animation: slideIn-right .7s ease .5s;
+    animation-fill-mode: forwards;
+}
+nav>.sub>a {
+    padding: 5px;
+}
+nav>.sub>a:after {
+    display: none;
+}
 #search {
     flex: 1 0 40%;
     height: 64px;
@@ -224,10 +244,15 @@ h1,h2,h3,h4 {
     font-family: 'Playfair Display', serif;
 }
 section {
-    min-height: 50vh;
     padding: 20px 0;
-    background-color: var(--page-background-color-1);
     color: var(--page-text-color);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+section.vertical {
+    flex-flow: column nowrap;
+    align-items: center;
 }
 main a, footer a {
     text-decoration: none;
@@ -259,6 +284,7 @@ p img {
 }
 .heading {
     z-index: 5;
+    width: 100%;
 }
 .heading h1 {
     font-size: 8em;
@@ -272,9 +298,6 @@ p img {
 .wrapper {
     max-width: 75%;
     margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
 }
 .card {
     flex: 1 0 30%;
@@ -284,6 +307,7 @@ p img {
     background-color: var(--page-background-color-2);
     box-shadow: 0px 25px 31px -8px rgba(0,0,0,0.06);
     min-width: 0;
+    max-width: 1220px;
     margin: 20px;
 }
 .filler {
@@ -453,9 +477,6 @@ footer div:last-child {
 }
 
 @media only screen and (max-width:1024px) {
-    section {
-        min-height: unset;
-    }
     .wrapper {
         max-width: unset;
         padding: 0 40px;
@@ -486,9 +507,8 @@ footer div:last-child {
     .mobile {
         display: block;
     }
-    .wrapper {
+    section {
         flex-flow: column nowrap;
-        padding: 0 40px;
     }
     #logo {
         position: fixed;
