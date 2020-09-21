@@ -69,7 +69,10 @@
                     <form>
                         <input style="width:calc(50% - 20px)" type="text" name="firstname" placeholder="John" required/><input style="width:calc(50% - 20px)" type="text" name="lastname" placeholder="Doe" required/><br/>
                         <input type="email" style="width:calc(100% - 20px)" name="email" placeholder="john.doe@domain.com" required/><br/>
+                        <input type="radio" name="type" id="stylist" value="stylist" checked/><label for="stylist">Personal Stylist</label><br/>
+                        <input type="radio" name="type" id="customerservice" value="customerservice"/><label for="customerservice">Customer Care</label>
                         <textarea name="message" required></textarea>
+                        <input type="checkbox" name="consent" id="consent"/><label>I agree to the <a href="privacy.html">Privacy Policy</a></label><br/>
                         <input type="submit" value="Sign up!"/>
                     </form>
                 </div>

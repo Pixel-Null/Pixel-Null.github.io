@@ -407,10 +407,34 @@ form textarea {
     margin: 10px;
     width: calc(100% - 20px);
 }
+form input[type="radio"], form input[type="checkbox"] {
+    position: relative;
+    height: 16px;
+}
+form input[type="radio"]:after, form input[type="checkbox"]:after{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 100%;
+    display: block;
+    content: '';
+    border: var(--menu-background-color-1) solid var(--line-width);
+    background-color: var(--page-background-color-2);
+    transition: background-color .3s ease;
+    border-radius: 5px;
+}
+form input[type="radio"]:after {
+    border-radius: 999px;
+}
+form input[type="radio"]:checked:after, form input[type="checkbox"]:checked:after {
+    background-color: var(--menu-background-color-1);
+}
 label:not(#menuLabel) {
     font-size: .9em;
     font-weight: bold;
-    margin-left: 24px;
+    margin-left: 1em;
 }
 ul {
     list-style: none;
