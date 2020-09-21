@@ -510,7 +510,7 @@ footer div:last-child {
         top: 0;
         background-color: var(--menu-background-color-1);
         color: var(--menu-text-color);
-        padding: 0 25%;
+        padding: 50% 25%;
         opacity: 1;
         transition: transform .3s ease;
         transform: translateX(-100%);
