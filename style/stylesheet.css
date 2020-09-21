@@ -223,40 +223,6 @@ main {
 h1,h2,h3,h4 {
     font-family: 'Playfair Display', serif;
 }
-#progress {
-    display: none;
-    /* My poor child :( */
-
-    height: 80px;
-    width: 80px;
-    position: fixed;
-    top: 50%;
-    right: 10px;
-    opacity: 0;
-    z-index: 19;
-    animation: slideIn-right 1s ease .5s;
-    animation-fill-mode: forwards;
-}
-#progress circle {
-    fill: transparent;
-    stroke: #000;
-    stroke-width: var(--line-width);
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: teststroke 5s linear forwards;
-    transition: stroke .5s ease;
-}
-#progress p {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin: 0;
-    transition: color .5s ease;
-}
-
 section {
     min-height: 50vh;
     padding: 20px 0;
@@ -327,6 +293,8 @@ p img {
     max-width: 400px;
     box-shadow: 0px 25px 31px -8px rgba(0,0,0,0.2);
     cursor: pointer;
+    display: flex;
+    flex-flow: column nowrap;
     transition: background-color .3s ease, transform .3s ease, box-shadow .3s ease;
 }
 .card.item:hover {
@@ -335,6 +303,25 @@ p img {
 }
 .card.item>img {
     width: 100%;
+}
+.card.item>div {
+    margin-top: auto;
+}
+.card.item[after-sale$="%"] {
+    max-width: 500px;
+}
+.card.item[after-sale$="%"]:after {
+    content: attr(after-sale);
+    display: block;
+    position: absolute;
+    background-color: var(--menu-background-color-1);
+    color: var(--menu-text-color);
+    font-family: 'Playfair Display', Serif;
+    top: -10px;
+    right: -10px;
+    font-size: 1.4em;
+    padding: 16px 24px;
+    box-shadow: 0px 25px 31px -8px rgba(0,0,0,0.2);
 }
 .color {
     width: 1.6em;
@@ -405,6 +392,7 @@ form input {
 form textarea {
     margin: 10px;
     width: calc(100% - 20px);
+    resize: vertical;
 }
 form input[type="radio"], form input[type="checkbox"] {
     position: relative;
@@ -486,6 +474,9 @@ footer div:last-child {
     }
     #newsletter {
         display: none;
+    }
+    .card.item[after-sale$="%"] {
+        max-width: unset;
     }
 }
 @media only screen and (max-width:480px) {
