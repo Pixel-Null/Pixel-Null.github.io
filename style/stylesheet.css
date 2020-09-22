@@ -502,6 +502,9 @@ footer div:last-child {
     .card.item[after-sale$="%"] {
         max-width: unset;
     }
+    main a:after, footer a:after {
+        width: 100%;
+    }
 }
 @media only screen and (max-width:480px) {
     .desktop {
