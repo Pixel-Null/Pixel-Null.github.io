@@ -46,8 +46,8 @@
     <!-- Main content of website -->
     <main>
         <!-- 2 Background elements -->
-        <img class="desktop" src="media/human.svg" alt="" style="position:absolute;top:60%;left:25%;max-width:unset;width:300px;height:auto;z-index:0"/>
-        <img class="desktop" src="media/human2.svg" alt="" style="position:absolute;top:40%;left:55%;max-width:unset;width:300px;height:auto;z-index:0"/>
+        <img class="desktop backdrop" src="media/human.svg" alt=""/>
+        <img class="desktop backdrop" src="media/human2.svg" alt=""/>
         <div class="wrapper">
             <!-- Main divided up in sections -->
             <section>
@@ -56,13 +56,34 @@
                 </div>
             </section>
             <section>
-                <div class="card" style="max-width: 600px">
-                    <p style="font-weight:bold;text-align:center">Contact us to sign up for our personal stylist program!</p>
+                <div class="card sized">
+                    <h2>Contact us to sign up for our personal stylist program!</h2>
                     <form>
-                        <input style="width:calc(50% - 20px)" type="text" name="firstname" placeholder="John" required/><input style="width:calc(50% - 20px)" type="text" name="lastname" placeholder="Doe" required/><br/>
+                        <div>
+                            <input type="text" name="firstname" placeholder="John" required/>
+                            <input type="text" name="lastname" placeholder="Doe" required/>
+                        </div>
                         <input type="email" style="width:calc(100% - 20px)" name="email" placeholder="john.doe@domain.com" required/><br/>
                         <input type="radio" name="type" id="stylist" value="stylist" checked/><label for="stylist">Personal Stylist</label><br/>
                         <input type="radio" name="type" id="customerservice" value="customerservice"/><label for="customerservice">Customer Care</label>
+                        <textarea name="message" required></textarea>
+                        <input type="checkbox" name="consent" id="consent"/><label>I agree to the <a href="terms.html">Privacy Policy</a></label><br/>
+                        <input type="submit" value="Sign up!"/>
+                    </form>
+                </div>
+                <div class="card sized">
+                    <h2>Corporate orders?</h2>
+                    <form>
+                        <div>
+                            <input type="text" name="firstname" placeholder="John" required/>
+                            <input type="text" name="lastname" placeholder="Doe" required/>
+                        </div>
+                        <input type="email" name="email" placeholder="john.doe@domain.com" required/><br/>
+                        <input type="text" name="corporation" placeholder="Business" required/><br/>
+                        <div>
+                            <input type="text" name="item" placeholder="Item" required/>
+                            <input type="text" name="amount" placeholder="0" required/>
+                        </div>
                         <textarea name="message" required></textarea>
                         <input type="checkbox" name="consent" id="consent"/><label>I agree to the <a href="terms.html">Privacy Policy</a></label><br/>
                         <input type="submit" value="Sign up!"/>

@@ -276,6 +276,9 @@ main a:after, footer a:after {
 main a:hover:after, footer a:hover:after {
     width: 100%;
 }
+.backdrop {
+    display: none;
+}
 p img {
     max-width: 1em;
     display: inline-block;
@@ -309,6 +312,9 @@ p img {
     min-width: 0;
     max-width: 1220px;
     margin: 20px;
+}
+.card.sized {
+    max-width: 600px;
 }
 .filler {
     flex: 1 0 30%;
@@ -404,6 +410,7 @@ input:not([type="submit"]), textarea {
     box-shadow: 0px 0px 31px -8px rgba(0,0,0,0.0);
     position: relative;
     transition: background-color .5s ease, box-shadow .5s ease;
+    width: calc(100% - 20px);
 }
 input:not([type="submit"]):focus, textarea:focus {
     background-color: var(--page-background-color-2);
@@ -421,6 +428,7 @@ form textarea {
 form input[type="radio"], form input[type="checkbox"] {
     position: relative;
     height: 16px;
+    width: 16px;
 }
 form input[type="radio"]:after, form input[type="checkbox"]:after{
     box-sizing: border-box;
@@ -441,6 +449,14 @@ form input[type="radio"]:after {
 }
 form input[type="radio"]:checked:after, form input[type="checkbox"]:checked:after {
     background-color: var(--menu-background-color-1);
+}
+form>div {
+    display: flex;
+    flex-flow: row wrap;
+}
+form>div>input {
+    flex: 1 1 calc(50% - 20px);
+    min-width: calc(50% - 20px);
 }
 label:not(#menuLabel) {
     font-size: .9em;
@@ -505,6 +521,9 @@ footer div:last-child {
     }
     main a:after, footer a:after {
         width: 100%;
+    }
+    form>div {
+        flex-flow: column nowrap;
     }
 }
 @media only screen and (max-width:480px) {
