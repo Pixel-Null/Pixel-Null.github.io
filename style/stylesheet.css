@@ -420,6 +420,9 @@ form input {
     height: 48px;
     margin: 10px;
 }
+form input:not([type="submit"]), form textarea {
+    width: auto;
+}
 form textarea {
     margin: 10px;
     width: calc(100% - 20px);
