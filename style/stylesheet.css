@@ -293,6 +293,7 @@ p img {
 .heading p {
     font-size: 3em;
     margin-left: 2em;
+    line-height: 1.62em;
 }
 .wrapper {
     max-width: 75%;
