@@ -425,12 +425,14 @@ input:not([type="submit"]):focus, textarea:focus {
     background-color: var(--page-background-color-2);
     box-shadow: 0px 25px 31px -8px rgba(0,0,0,0.06);
 }
+form {
+}
 form input {
     height: 48px;
     margin: 10px;
 }
 form input:not([type="submit"]), form textarea {
-    width: auto;
+    width: 100%;
 }
 form textarea {
     margin: 10px;
@@ -466,8 +468,8 @@ form>div {
     display: flex;
     flex-flow: row wrap;
 }
-form>div>input {
-    flex: 1 1 calc(50% - 20px);
+form>div>input:not([type="submit"]) {
+    flex: 1 0 calc(50% - 20px);
     min-width: calc(50% - 20px);
 }
 label:not(#menuLabel) {
