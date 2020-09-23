@@ -359,6 +359,15 @@ p img {
     margin: 4px;
     display: inline-block;
 }
+.color.red {
+    background-color: red;
+}
+.color.blue {
+    background-color: blue;
+}
+.color.green {
+    background-color: green;
+}
 .color.active {
     border: var(--page-text-color) solid var(--line-width);
 }
