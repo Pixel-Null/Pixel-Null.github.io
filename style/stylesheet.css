@@ -44,6 +44,22 @@ main {
     min-height: 100vh;
     overflow-y: hidden;
 }
+main:after {
+    content: '';
+    background-image: url("../media/images/plant.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    height: 90em;
+    width: 30%;
+    filter: drop-shadow(0 6px 4px rgba(0,0,0,.2));
+    z-index: 5;
+}
 .desktop {
     display: block;
 }
@@ -312,6 +328,7 @@ p img {
     min-width: 0;
     max-width: 1220px;
     margin: 20px;
+    z-index: 6;
 }
 .card.sized {
     max-width: 600px;
@@ -407,6 +424,7 @@ button:hover, input[type="submit"]:hover {
     transition: opacity .3s ease;
     animation: slideIn-bottom 1s ease .9s;
     animation-fill-mode: forwards;
+    z-index: 6;
 }
 #newsletter>p {
     font-weight:bold;
@@ -509,15 +527,26 @@ footer div:last-child {
     }
 }
 @media only screen and (max-width:1024px) {
+    main {
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    main:after {
+        width: 40%;
+        filter: drop-shadow(0 5px 2px rgba(0,0,0,.2));
+    }
     .wrapper {
         max-width: unset;
+        height: 100%;
         padding: 0 40px;
     }
     #search {
         display: none;
     }
     .heading {
-        margin: 0 20px;
+        margin: 0;
     }
     .heading h1 {
         font-size: 3em;
@@ -544,6 +573,9 @@ footer div:last-child {
     }
     .mobile {
         display: block;
+    }
+    main:after {
+        filter: drop-shadow(0 3px 1px rgba(0,0,0,.15));
     }
     section {
         flex-flow: column nowrap;
