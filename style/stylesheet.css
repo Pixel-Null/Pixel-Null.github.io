@@ -522,7 +522,7 @@ footer {
 footer div:last-child {
     text-align: right;
 }
-@media only screen and (max-height:50em) {
+@media only screen and (max-height:60em) {
     #newsletter {
         display: none;
     }
