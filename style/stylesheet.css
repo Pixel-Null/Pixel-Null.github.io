@@ -330,12 +330,20 @@ p img {
 .card.sized {
     max-width: 600px;
 }
-.card>img {
-    width: 100%;
-    border-radius: 2px;
+.card.profile>p {
+    width:60%;
 }
-.filler {
-    flex: 1 0 30%;
+.card.profile>img {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 60%;
+    box-shadow: 0px 25px 31px -8px rgba(0,0,0,0.2);
+}
+.card.profile>button {
+    bottom: -30px;
+    right: -10px;
+    left: unset;
 }
 .card.item {
     max-width: 400px;
@@ -367,6 +375,10 @@ p img {
     font-size: 1.4em;
     padding: 16px 24px;
     box-shadow: 0px 25px 31px -8px rgba(0,0,0,0.2);
+}
+.item>img {
+    width: 100%;
+    border-radius: 2px;
 }
 .color {
     width: 1.6em;
