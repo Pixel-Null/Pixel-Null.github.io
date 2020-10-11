@@ -292,11 +292,20 @@ main a:after, footer a:after {
 main a:hover:after, footer a:hover:after {
     width: 100%;
 }
-p img {
-    max-width: 1em;
+p img{
+    height: 10em;
+}
+p img.newsImg {
+    float: right;
     display: inline-block;
     vertical-align: center;
 }
+p img.newsImgSecond {
+    float: left;
+    display: inline-block;
+    vertical-align: center;
+}
+
 .heading {
     z-index: 5;
     width: 100%;
@@ -508,8 +517,11 @@ label:not(#menuLabel) {
 }
 ul {
     list-style: none;
-    padding: 0;
-    box-shadow: 0px 25px 31px 5px rgba(0,0,0,0.2);
+    padding: 1em;
+    margin-bottom: 2em;
+    box-shadow: 0px 15px 35px 8px rgba(0,0,0,0.2);
+    border-radius: 1em;
+    width: fit-content;
 }
 .card>ul {
     margin-bottom: 40px;
@@ -534,6 +546,23 @@ footer {
 footer div:last-child {
     text-align: right;
 }
+.paper {
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-end;
+}
+.article {
+    max-width: 35em;
+    padding: 2em;
+}
+.mainArticle {
+    padding: 2em;
+}
+.paper>ul{
+    list-style: circle;
+    font-size: larger;
+}
+
 @media only screen and (max-height:60em) {
     #newsletter {
         display: none;
@@ -583,6 +612,10 @@ footer div:last-child {
     }
     form>div {
         flex-flow: column nowrap;
+    }
+    .article {
+        max-width: none;
+        padding: 2em;
     }
 }
 @media only screen and (max-width:480px) {
