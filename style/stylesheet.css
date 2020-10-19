@@ -295,17 +295,6 @@ main a:hover:after, footer a:hover:after {
 p img{
     height: 10em;
 }
-p img.newsImg {
-    float: right;
-    display: inline-block;
-    vertical-align: center;
-}
-p img.newsImgSecond {
-    float: left;
-    display: inline-block;
-    vertical-align: center;
-}
-
 .heading {
     z-index: 5;
     width: 100%;
@@ -407,6 +396,26 @@ p img.newsImgSecond {
 .color.active {
     border: var(--page-text-color) solid var(--line-width);
 }
+.newspaper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.newspaper>div {
+    width: 30%;
+    padding: 10px;
+    position: relative;
+}
+.newspaper>div>img {
+    width: calc(100% - 20px);
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.newspaper>div.bigger {
+    width: 60%;
+}
 button, input[type="submit"] {
     border: none;
     background: rgba(3,3,3,.8);
@@ -440,7 +449,6 @@ button:active, input[type="submit"]:active {
     right: 20px;
     width: 600px;
     min-width: unset;
-    opacity: 1;
     margin: 0;
     opacity: 0;
     transition: opacity .3s ease;
@@ -546,22 +554,6 @@ footer {
 footer div:last-child {
     text-align: right;
 }
-.paper {
-    display: flex;
-    flex-flow: wrap;
-    align-items: flex-end;
-}
-.article {
-    max-width: 35em;
-    padding: 2em;
-}
-.mainArticle {
-    padding: 2em;
-}
-.paper>ul{
-    list-style: circle;
-    font-size: larger;
-}
 
 @media only screen and (max-height:60em) {
     #newsletter {
@@ -579,6 +571,9 @@ footer div:last-child {
         width: 40%;
         max-height: 90vh;
         filter: drop-shadow(0 5px 2px rgba(0,0,0,.2));
+    }
+    .newspaper>div, .newspaper>div.bigger {
+        width: 50%;
     }
     .wrapper {
         max-width: unset;
@@ -613,10 +608,6 @@ footer div:last-child {
     form>div {
         flex-flow: column nowrap;
     }
-    .article {
-        max-width: none;
-        padding: 2em;
-    }
 }
 @media only screen and (max-width:480px) {
     .desktop {
@@ -628,8 +619,11 @@ footer div:last-child {
     main:after {
         filter: drop-shadow(0 3px 1px rgba(0,0,0,.15));
     }
-    section {
+    section, .newspaper {
         flex-flow: column nowrap;
+    }
+    .newspaper>div, .newspaper>div.bigger{
+        width: unset;
     }
     #logo {
         position: fixed;
