@@ -58,12 +58,20 @@
                     <h2>Contact us to sign up for our personal stylist program!</h2>
                     <form>
                         <div>
-                            <input type="text" name="firstname" placeholder="John" required/>
-                            <input type="text" name="lastname" placeholder="Doe" required/>
+                            <span>
+                                <label for="firstname">First Name</label>
+                                <input type="text" name="firstname" placeholder="John" required/>
+                            </span>
+                            <span>
+                                <label for="lastname">Last Name</label>
+                                <input type="text" name="lastname" placeholder="Doe" required/>
+                            </span>
                         </div>
+                        <label for="email">E-Mail</label>
                         <input type="email" name="email" placeholder="john.doe@domain.com" required/><br/>
                         <input type="radio" name="type" id="stylist" value="stylist" checked/><label for="stylist">Personal Stylist</label><br/>
-                        <input type="radio" name="type" id="customerservice" value="customerservice"/><label for="customerservice">Customer Care</label>
+                        <input type="radio" name="type" id="customerservice" value="customerservice"/><label for="customerservice">Customer Care</label><br/>
+                        <label for="message">Your Message</label>
                         <textarea name="message" required></textarea>
                         <input type="checkbox" name="consent" id="consent"/><label>I agree to the <a href="terms.html">Privacy Policy</a></label><br/>
                         <input type="submit" value="Sign up!"/>
@@ -73,16 +81,32 @@
                     <h2>Corporate orders?</h2>
                     <form>
                         <div>
-                            <input type="text" name="firstname" placeholder="John" required/>
-                            <input type="text" name="lastname" placeholder="Doe" required/>
+                            <span>
+                                <label for="firstname">First Name</label>
+                                <input type="text" name="firstname" placeholder="John" required/>
+                            </span>
+                            <span>
+                                <label for="lastname">Last Name</label>
+                                <input type="text" name="lastname" placeholder="Doe" required/>
+                            </span>
                         </div>
                         <!-- Work on sizing -->
+                        <label for="email">E-Mail</label>
                         <input type="email" name="email" placeholder="john.doe@domain.com" required/><br/>
-                        <input type="text" name="corporation" placeholder="Business" required/>
+                        <label for="email">Business</label>
+                        <input type="text" name="corporation" placeholder="Business name" required/>
+                        <label for="item">Order</label>
                         <div>
                             <input type="text" name="item" placeholder="Item" required/>
-                            <input type="text" name="amount" placeholder="0" required/>
+                            <select name="amount" id="amount">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                                <option value="5">Five</option>
+                            </select>
                         </div>
+                        <label for="message">Your Message</label>
                         <textarea name="message" required></textarea>
                         <input type="checkbox" name="consent" id="consent"/><label>I agree to the <a href="terms.html">Privacy Policy</a></label><br/>
                         <input type="submit" value="Sign up!"/>
